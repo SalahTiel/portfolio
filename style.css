@@ -1,0 +1,152 @@
+:root{
+    /*colors*/
+    --primary: #94E553;
+    --secondary: #780CB6;
+    --dark: #2B292C;
+    --gray: #6C676F;
+    --light-one: #EDEDED;
+    --light-two: #DAD6DC;
+    /*dimetions*/
+    --border-radius: 6px;
+    --button-size: 10rem;
+    --spacing: 2rem;
+    --container: 15rem;
+    /*fonts*/
+    --regular: 1rem;
+    --medium: 1.3rem;
+    --subtitle: 2rem;
+}
+:root.darkTheme{
+    --light-one: #271c2c;
+    --light-two: #211B25;
+
+    --dark: #EDEDED;
+}
+
+/*reset*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: var(--light-one);
+}
+
+/*header*/
+header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem var(--container);
+}
+header .menuButton{
+    display: none;
+}
+header nav{
+    display: flex;
+    gap: var(--spacing);
+    align-items: center;
+}
+header nav.navigationOne a{
+    font: 400 var(--regular) 'Sora';
+    color: var(--gray);
+}
+header nav.navigationOne a:first-child{
+    color: var(--secondary);
+}
+header nav.navigationTwo .toggleTheme,
+div.mobileMenu .buttons .toggleTheme{
+    width: 3rem;
+    display: flex;
+    justify-content: start;
+    padding: 0.3rem;
+    background-color: var(--primary);
+    border-radius: var(--border-radius);
+}
+header nav.navigationTwo .toggleTheme button,
+div.mobileMenu .buttons .toggleTheme button{
+    width: 1.2rem;
+    height: 1.2rem;
+    border: none;
+    border-radius: var(--border-radius);
+}
+header nav.navigationTwo .contactButton,
+div.mobileMenu .contactButton{
+    width: var(--button-size);
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary);
+    transition: box-shadow 300ms;
+}
+header nav.navigationTwo .contactButton:hover{
+    box-shadow: 0px 0px 10px var(--primary);
+    transition: box-shadow 300ms;
+}
+header nav.navigationTwo .contactButton a,
+div.mobileMenu .contactButton a{
+    font: 700 var(--regular) 'Sora';
+}
+
+/*main*/
+main{
+    height: 85vh;
+    padding-inline: var(--container);
+}
+
+/*main/home*/
+section.home{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.home .title h3{
+    font: 400 var(--subtitle) 'Sora';
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+section.home .title h1{
+    font: 700 7rem 'Sora';
+    color: var(--secondary);
+    line-height: 6rem;
+    margin-bottom: var(--spacing);
+}
+section.home .title .buttons{
+    display: flex;
+    gap: var(--spacing);
+}
+section.home .title .buttons button img{
+    width: 2rem;
+}
+section.home .title .buttons button{
+    width: var(--button-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font: 700  var(--medium) 'Sora';
+    color: #2B292C;
+    background-color: var(--primary);
+}
+section.home .title .buttons button:hover{
+    box-shadow: 0px 0px 10px var(--primary);
+    transition: box-shadow 300ms;
+}
+section.home .homeImage{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35vw;
+}

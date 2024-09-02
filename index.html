@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveness.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    
+    <title>Salah Gallery</title>
+</head>
+<body>
+    <div class="mobileMenu">
+        <div class="buttons">
+            <img src="assets/icon-close-dark.svg" alt="icone para fechar o menu" onclick="toggleMenu()">
+            <div class="toggleTheme" onclick="toggleTheme()">
+                <button></button>
+            </div>
+        </div>
+
+        <nav>
+            <a href="">Home</a>
+            <a href="">Sobre</a>
+            <a href="">Projetos</a>
+            <a href="">Contato</a>
+        </nav>
+        <button class="contactButton"><a href="">Fale comigo</a></button>
+    </div>
+
+    <header>
+        <img class="menuButton" src="assets/icon-menu.svg" alt="icone para abrir o menu" onclick="toggleMenu()">
+        <nav class="navigationOne">
+            <a href="">Home</a>
+            <a href="">Sobre</a>
+            <a href="">Projetos</a>
+            <a href="">Contato</a>
+        </nav>
+
+        <nav class="navigationTwo">
+            <div class="toggleTheme" onclick="toggleTheme()">
+                <button></button>
+            </div>
+            <button class="contactButton"><a href="">Fale comigo</a></button>
+        </nav>
+    </header>
+    <main>
+        <section class="home">
+            <div class="title">
+                <h3>Olá, eu sou o <span>Salah</span></h3>
+                <h1>&lt;FRONTEND <br/> DEVELOPER/&gt;</h1>
+                <div class="buttons">
+                    <button><img src="assets/icon-github-dark.svg" alt="ícone do GitHub">GitHub</button>
+                    <button><img src="assets/icon-linkedin-dark.svg" alt="ícone do LinkedIn"> LinkedIn</button>
+                </div>
+            </div>
+            <img class="homeImage" src="assets/img-home.png" alt="rapaz jovem usando óculos e camiseta branca">
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
