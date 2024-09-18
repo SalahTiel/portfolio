@@ -3,7 +3,7 @@ div.mobileMenu{
     background-color: var(--light-two);
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     display: none;
     padding: 4rem;
 }
@@ -62,6 +62,7 @@ div.mobileMenu .contactButton a{
         --regular: 0.8rem;
         --medium: 1.1rem;
         --subtitle: 1.8rem;
+        --title: 2rem
     }
     section.home .title h1{
         font-size: 4rem;
@@ -87,15 +88,40 @@ div.mobileMenu .contactButton a{
     }
     section.home .homeImage{
         width: 75%;
+        max-width: 500px;
         left: 50%;
         transform: translate(-50%);
+    }
+
+    section.about .wrapper{
+        text-align: center;
+        flex-direction: column;
+        border: none;
+    }
+    section.about .wrapper .aboutImg{
+        width: calc(100% - var(--container));;
+        padding-inline: 2rem;
+        border-bottom :1px solid var(--light-one);
+        margin-bottom: var(--spacing);
+        margin-inline: auto ;
+    }
+    section.about .wrapper .text .icons{
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        row-gap: 0;
+    }
+    section.about .wrapper .text .icons img{
+        width: 8vw;
     }
 }
 
 @media screen and (max-width: 800px){
     section.home .homeImage{
-        width: 100%;
+        width: calc(100% - var(--container));
     }
+    
 }
 
 @media screen and (max-width: 725px){
@@ -106,6 +132,7 @@ div.mobileMenu .contactButton a{
         --regular: 0.5rem;
         --medium: 0.8rem;
         --subtitle: 1.2rem;
+        --title: 1.5rem
     }
     header{
         justify-content: start;
@@ -125,5 +152,11 @@ div.mobileMenu .contactButton a{
     }
     section.home .title .buttons button{
         padding: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 340px){
+    section.home .homeImage{
+        width: 40%;
     }
 }
