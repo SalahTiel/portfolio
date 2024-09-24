@@ -44,6 +44,11 @@ div.mobileMenu .contactButton a{
     section.home .title h1{
         font-size: 6rem;
     }
+
+    section.projects .cards .card{
+        width: 18rem;
+    }
+
 }
 
 @media screen and (max-width: 1440px){
@@ -54,6 +59,7 @@ div.mobileMenu .contactButton a{
         width: 40vw;
     }
 }
+
 @media screen and (max-width: 1280px){
     :root{
         --button-size: 8rem;
@@ -115,11 +121,26 @@ div.mobileMenu .contactButton a{
     section.about .wrapper .text .icons img{
         width: 8vw;
     }
+
+    section.projects .cards .card{
+        width: 16rem;
+    }
+
+    section.projects .projectsOverlay .wrapper{
+        width: 60vw;
+    }
 }
 
 @media screen and (max-width: 800px){
     section.home .homeImage{
         width: calc(100% - var(--container));
+    }
+
+    section.projects .cards .card{
+        width: 8rem;
+    }
+    section.projects .cards .card img{
+        height: 6rem;
     }
     
 }
@@ -152,6 +173,9 @@ div.mobileMenu .contactButton a{
     }
     section.home .title .buttons button{
         padding: 0.6rem;
+    }
+    section.projects .projectsOverlay .wrapper{
+        width: 80vw;
     }
 }
 

@@ -35,8 +35,8 @@
         <nav class="navigationOne">
             <a href="#home">Home</a>
             <a href="#about">Sobre</a>
-            <a href="">Projetos</a>
-            <a href="">Contato</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
         </nav>
 
         <nav class="navigationTwo">
@@ -80,7 +80,61 @@
                 </div>
             </div>
         </section>
+
+        <section id="projects" class="projects">
+            <h2>&lt;<span>Meus projetos</span>/&gt;</h2>
+            <p class="subtitle">Clique em algum dos projetos para saber mais</p>
+
+            <div class="cards">
+                <div class="card" onclick="toogleOverlay()">
+                    <img src="assets/card-papiro.png" alt="imagem miniuatura">
+                    <p class="name">Papiro</p>
+                    <p class="description">Aplicação Web desenvolvida para auxiliar na gestão de pagantes</p>
+                </div>
+
+                <div class="card" onclick="developmentAlert()"> 
+                    <img src="assets/card-desenvolvimento.png" alt="imagem miniuatura">
+                    <p class="name">Em desenvolvimento</p>
+                    <p class="description">Este projeto se encontra em fase de desenvolvimento</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/card-desenvolvimento.png" alt="imagem miniuatura">
+                    <p class="name">Em desenvolvimento</p>
+                    <p class="description">Este projeto se encontra em fase de desenvolvimento</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/card-desenvolvimento.png" alt="imagem miniuatura">
+                    <p class="name">Em desenvolvimento</p>
+                    <p class="description">Este projeto se encontra em fase de desenvolvimento</p>
+                </div>
+            </div>
+            
+            <div class="projectsOverlay">
+                <div class="background" onclick="toogleOverlay()"></div>
+                
+                <div class="wrapper">
+                    <p class="name">Papiro</p>
+                    <p class="description">Papiro é uma aplicação web desenvolvida para gerenciar o controle de pagantes mensais, focada em facilitar a gestão financeira de assinaturas recorrentes. A plataforma permite que os administradores visualizem rapidamente o status de pagamento dos clientes, organizando-os de forma eficiente e intuitiva.</p>
+                    <div class="gallery">
+                        <img src="assets/img-overlay-1.jpg" alt="">
+                        <img src="assets/img-overlay-2.jpg" alt="">
+                        <img src="assets/img-overlay-3.jpg" alt="">
+                        <img src="assets/img-overlay-4.jpg" alt="">
+                    </div>
+                    <button><a href="">Ir para projeto</a><img src="assets/icon-arrow-dark.svg" alt=""></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>&lt;<span>Vamos trabalhar juntos!</span>/&gt;</h2>
+        </section>
     </main>
+    <footer>
+        <p>footer</p>
+    </footer>
 </body>
 <script src="script.js"></script>
 </html>

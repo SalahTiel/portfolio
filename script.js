@@ -12,18 +12,35 @@ function toggleTheme(){
         desktopTheme.style.justifyContent = 'start'
         document.querySelector('html').classList.remove('darkTheme')
     }
-
     light = !light
 }
 
 
-let opened = false
+let openMenu = false
 function toggleMenu(){
-    let menu = document.getElementsByClassName('mobileMenu')[0]
-    if(opened){
+    const menu = document.getElementsByClassName('mobileMenu')[0]
+    if(openMenu){
         menu.style.display = 'none'
     }else{
         menu.style.display = 'block'
     }
-    opened = !opened
+    openMenu = !openMenu
+}
+
+let openOverlay = false
+function toogleOverlay (){
+    const background = document.querySelector('.projectsOverlay .background')
+    const projectOverlay = document.querySelector('.projectsOverlay .wrapper');
+    if(openOverlay){
+        background.style.display = 'none'
+        projectOverlay.style.display = 'none'
+    }else{
+        background.style.display = 'block'
+        projectOverlay.style.display = 'block'
+    }
+    openOverlay = !openOverlay
+}
+
+function developmentAlert (){
+    alert('Este projeto está em fase de desenvolvimento. Continue acompanhando!  : )')
 }
