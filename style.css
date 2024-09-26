@@ -1,7 +1,7 @@
 :root{
     /*colors*/
     --primary: #94E553;
-    --secondary: #780CB6;
+    --secondary: #780cb6;
     --dark: #2B292C;
     --gray: #6C676F;
     --light-one: #EDEDED;
@@ -35,6 +35,7 @@ a{
 }
 body{
     background-color: var(--light-one);
+    overflow-x: hidden;
 }
 
 /*header*/
@@ -329,6 +330,146 @@ section.projects .projectsOverlay .wrapper button a{
 }
 
 
+section.contact{
+    position: relative;
+    height: 25%;
+    padding: 15vh var(--container);
+    background-color: var(--light-one);
+}
+section.contact .backgroundAnimation{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+    z-index: 0;
+}
+section.contact .backgroundAnimation .row{
+    width: 100%;
+    display: flex;
+    gap: 50vw;
+    animation: bg-animation calc(500s / var(--time)) linear infinite;
+}
+section.contact .backgroundAnimation p{
+    font: 400 var(--regular) 'Sora';
+    color: #b722ed2f;
+    text-wrap: nowrap;
+}
+section.contact h2{
+    text-align: center;
+    font: 700 var(--subtitle) 'Sora';
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+section.contact h2 span{
+    color: var(--dark);
+}
+section.contact .subtitle{
+    text-align: center;
+    font: 400 var(--regular) 'Sora';
+    color: var(--gray);
+    margin-bottom: var(--spacing);
+    position: relative;
+    z-index: 1;
+}
+section.contact form{
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin-inline: auto;
+    z-index: 1;
+}
+section.contact form .inputWrapper{
+    display: flex;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    background-color: var(--light-two);
+    border-radius: var(--border-radius);
+    margin-bottom: 0.5rem;
+}
+section.contact form .textarea{
+    display: flex;
+    align-items: start;
+    height: 7rem;
+}
+section.contact form .textarea textarea{
+    width: 100%;
+    height: 100%;
+}
+section.contact form .inputWrapper img{
+    width: 2rem;
+}
+section.contact form .inputWrapper input, textarea{
+    border: none;
+    background-color: var(--light-two);
+    outline: none;
+    font: 400 var(--regular) 'Sora';
+    color: var(--gray);
+    
+}
+section.contact form button{
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font: 400 var(--regular) 'Sora';
+    color: var(--dark);
+    background-color: var(--primary);
+    margin-bottom: var(--spacing);
+    transition: all 300ms;
+}
+section.contact form button:hover{
+    box-shadow: 0px 0px 10px var(--primary);
+    transition: all 300ms;
+}
+section.contact ul{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-inline: auto;
+    list-style: none;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+section.contact ul li{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--border-radius);
+    background-color: var(--light-two);
+    transition: all 300ms;
+}
+section.contact ul li:hover{
+    box-shadow: 0px 0px 10px var(--primary);
+    background-color: var(--primary);
+    transition: all 300ms;
+}
+section.contact ul li img{
+    width: 2rem;
+}
+section.contact ul li a{
+    font: 400 var(--regular) 'Sora';
+    color: var(--gray);
+    transition: all 300ms;
+    display: none;
+}
+section.contact ul li a:hover{
+    color: var(--secondary);
+    font-weight: 700;
+    transition: all 300ms;
+}
 
-
-
+footer{
+    background-color: red;
+}
+@keyframes bg-animation{
+    0%{transform: translateX(100vw);}
+    100%{transform: translate(-100vw);}
+}

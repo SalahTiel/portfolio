@@ -98,13 +98,13 @@
                     <p class="description">Este projeto se encontra em fase de desenvolvimento</p>
                 </div>
 
-                <div class="card">
+                <div class="card" onclick="developmentAlert()">
                     <img src="assets/card-desenvolvimento.png" alt="imagem miniuatura">
                     <p class="name">Em desenvolvimento</p>
                     <p class="description">Este projeto se encontra em fase de desenvolvimento</p>
                 </div>
 
-                <div class="card">
+                <div class="card" onclick="developmentAlert()">
                     <img src="assets/card-desenvolvimento.png" alt="imagem miniuatura">
                     <p class="name">Em desenvolvimento</p>
                     <p class="description">Este projeto se encontra em fase de desenvolvimento</p>
@@ -129,7 +129,55 @@
         </section>
 
         <section id="contact" class="contact">
+            <div class="backgroundAnimation">
+                <div class="row" style="--time : 28">
+                    <p>if(coffe == 0){coffe += 1}</p>
+                    <p>if(coffe == 0){coffe += 1}</p>
+                </div>
+                <div class="row" style="--time : 32">
+                    <p >console.log("Hello, World!")</p>
+                    <p>console.log("Hello, World!")</p>
+                </div>
+                <div class="row" style="--time : 10">
+                    <p>const [writingCode, setWrintingCode] = useState(true)</p>
+                    <p>const [writingCode, setWrintingCode] = useState(true)</p>
+                </div>
+                <div class="row" style="--time : 16">
+                    <p>const developer = code + coffe</p>
+                    <p>const developer = code + coffe</p>
+                </div>
+            </div>
+
             <h2>&lt;<span>Vamos trabalhar juntos!</span>/&gt;</h2>
+            <p class="subtitle">Me envie um formulário de contato</p>
+
+            <form id="contactForm" action="https://api.staticforms.xyz/submit" method="POST">
+                <input type="hidden" name="accessKey" value="0b2be8df-ee9e-46a5-89c3-f9ffe039038f">
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html#contact">
+                <input type="text" name="honeypot" style="display: none;">
+
+                <div class="inputWrapper">
+                    <img src="assets/icon-person.svg" alt="">
+                    <input required type="text" name="name" placeholder="Seu nome">
+                </div>
+                <div class="inputWrapper">
+                    <img src="assets/icon-mail-gray.svg" alt="">
+                    <input required type="email" name="email" placeholder="Email para contato">
+                </div>
+                <div class="inputWrapper textarea">
+                    <img src="assets/icon-pencil.svg" alt="">
+                    <textarea required name="message" placeholder="Sua mensagem"></textarea>
+                </div>
+
+                <button type="submit">Enviar email</button>
+            </form>
+            <p class="subtitle">Também me contate ou acompanhe nas redes abaixo &#x1F609</p>
+            <ul>
+                <li><img src="assets/icon-github.svg" alt=""><a href="">GitHub</a></li>
+                <li><img src="assets/icon-linkedin.svg" alt=""><a href="">LinkedIn</a></li>
+                <li><img src="assets/icon-whatsapp.svg" alt=""><a href="">Whatsapp</a></li>
+                <li><img src="assets/icon-mail.svg" alt=""><a href="">salatielmf19@gmail.com</a></li>
+            </ul>
         </section>
     </main>
     <footer>
