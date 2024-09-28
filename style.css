@@ -333,7 +333,8 @@ section.projects .projectsOverlay .wrapper button a{
 section.contact{
     position: relative;
     height: 25%;
-    padding: 15vh var(--container);
+    padding-top: 15vh;
+    padding-inline: var(--container);
     background-color: var(--light-one);
 }
 section.contact .backgroundAnimation{
@@ -341,7 +342,9 @@ section.contact .backgroundAnimation{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 90%;
+    height: 100%;
+    top: 1.5rem;
+    left: 0;
     z-index: 0;
 }
 section.contact .backgroundAnimation .row{
@@ -467,9 +470,69 @@ section.contact ul li a:hover{
 }
 
 footer{
-    background-color: red;
+    position: relative;
+    height: 45vh;
+    display: flex;
+    justify-content: right;
+    gap: var(--container);
+    padding-inline: var(--container);
+    padding-top: 10vh;
+    background-color: var(--dark);
 }
+
+footer .footerImage{
+    height: calc(100% - 10vh);
+    filter: opacity(0.5);
+    position: absolute;
+    left: var(--container);
+    bottom: 0;
+}
+footer h4{
+    font: 700 var(--medium) 'Sora';
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+footer .navigation, footer .contact{
+    position: relative;
+    z-index: 1;
+}
+footer .navigation nav{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+footer .navigation nav a{
+    font: 400 var(--regular) 'Sora';
+    color: var(--light-one);
+    margin-bottom: var(--spacing);
+    transition: all 300ms;
+}
+footer .navigation nav a:hover{
+    color: var(--secondary);
+    transition: all 300ms;
+}
+footer .contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing);
+}
+footer .contact ul li img{
+    width: 2rem;
+}
+footer .contact ul li a{
+    font: 400 var(--regular) 'Sora';
+    color: var(--light-one);
+    transition: all 300ms;
+}
+footer .contact ul li a:hover{
+    color: var(--secondary);
+    transition: all 300ms;
+}
+
+
 @keyframes bg-animation{
     0%{transform: translateX(100vw);}
     100%{transform: translate(-100vw);}
 }
+

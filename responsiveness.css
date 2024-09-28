@@ -129,9 +129,18 @@ div.mobileMenu .contactButton a{
     section.projects .projectsOverlay .wrapper{
         width: 60vw;
     }
+    footer{
+        height: 35vh;
+        padding-top: 6vh;
+    }
+    footer .footerImage{
+        height: calc(80% - 10vh);
+        filter: opacity(0.4);
+        left: 5rem;
+    }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 814px){
     section.home .homeImage{
         width: calc(100% - var(--container));
     }
@@ -178,7 +187,16 @@ div.mobileMenu .contactButton a{
         width: 80vw;
     }
 }
+@media screen and (max-width: 410px){
+    footer{
+        justify-content: center;
+        gap: var(--spacing);
+    }
+    footer .contact ul li img{
+        width: 1.5rem;
+    }
 
+}
 @media screen and (max-width: 340px){
     section.home .homeImage{
         width: 40%;
