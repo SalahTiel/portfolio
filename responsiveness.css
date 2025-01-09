@@ -56,7 +56,7 @@ div.mobileMenu .contactButton a{
         font-size: 5rem;
     }
     section.home .homeImage{
-        width: 40vw;
+        width: 40dvw;
     }
 }
 
@@ -130,11 +130,11 @@ div.mobileMenu .contactButton a{
         width: 60vw;
     }
     footer{
-        height: 35vh;
-        padding-top: 6vh;
+        height: 35dvh;
+        padding-top: 6dvh;
     }
     footer .footerImage{
-        height: calc(80% - 10vh);
+        height: calc(80% - 10dvh);
         filter: opacity(0.4);
         left: 5rem;
     }
@@ -150,6 +150,20 @@ div.mobileMenu .contactButton a{
     }
     section.projects .cards .card img{
         height: 6rem;
+    }
+
+    footer{
+        justify-content: space-between;
+    }
+    footer .footerImage{
+       left: 50%;
+       transform: translate(-50%);
+    }
+    footer .contact h4{
+        text-align: right;
+    }
+    footer .contact ul li{
+        justify-content: right;
     }
     
 }
@@ -186,15 +200,16 @@ div.mobileMenu .contactButton a{
     section.projects .projectsOverlay .wrapper{
         width: 80vw;
     }
+    footer .contact ul li img{
+        width: 1.5rem;
+    }
 }
 @media screen and (max-width: 410px){
     footer{
         justify-content: center;
         gap: var(--spacing);
     }
-    footer .contact ul li img{
-        width: 1.5rem;
-    }
+    
 
 }
 @media screen and (max-width: 340px){

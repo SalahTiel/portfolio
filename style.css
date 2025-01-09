@@ -3,9 +3,13 @@
     --primary: #94E553;
     --secondary: #780cb6;
     --dark: #2B292C;
-    --gray: #6C676F;
+    --stay-dark: #2B292C;
+    --gray: #6C676F;     
     --light-one: #EDEDED;
+    --stay-light-one: #EDEDED;
     --light-two: #DAD6DC;
+    --stay-light-two: #DAD6DC;
+    --card-border-color: #6C676F;
     /*dimetions*/
     --border-radius: 6px;
     --button-size: 10rem;
@@ -20,6 +24,7 @@
 :root.darkTheme{
     --light-one: #271c2c;
     --light-two: #211B25;
+    --card-border-color: #312d33;
 
     --dark: #EDEDED;
 }
@@ -37,11 +42,14 @@ body{
     background-color: var(--light-one);
     overflow-x: hidden;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 /*header*/
 header{
     width: 100%;
-    height: 15vh;
+    height: 15dvh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,12 +65,18 @@ header nav{
     gap: var(--spacing);
     align-items: center;
 }
+header nav.navigationOne{
+    animation: leftToCenter 3s ease;
+}
 header nav.navigationOne a{
     font: 400 var(--regular) 'Sora';
     color: var(--gray);
 }
 header nav.navigationOne a:first-child{
     color: var(--secondary);
+}
+header nav.navigationTwo{
+    animation: rightToCenter 3s ease;
 }
 header nav.navigationTwo .toggleTheme,
 div.mobileMenu .buttons .toggleTheme{
@@ -101,7 +115,7 @@ div.mobileMenu .contactButton a{
 
 /*main*/
 main{
-    height: 400vh;
+    height: 400dvh;
 }
 
 section.home{
@@ -112,7 +126,10 @@ section.home{
     justify-content: space-between;
     align-items: center;
     padding-inline: var(--container);
-    padding-top: 15vh;
+    padding-top: 15dvh;
+}
+section.home .title{
+    animation: leftToCenter 3s ease;
 }
 section.home .title h3{
     font: 400 var(--subtitle) 'Sora';
@@ -132,6 +149,9 @@ section.home .title .buttons{
 section.home .title .buttons button img{
     width: 2rem;
 }
+section.home .title .buttons button a{
+    color: var(--stay-dark);
+}
 section.home .title .buttons button{
     width: var(--button-size);
     display: flex;
@@ -142,7 +162,6 @@ section.home .title .buttons button{
     border: none;
     border-radius: var(--border-radius);
     font: 700  var(--medium) 'Sora';
-    color: #2B292C;
     background-color: var(--primary);
 }
 section.home .title .buttons button:hover{
@@ -154,6 +173,7 @@ section.home .homeImage{
     right: var(--container);
     bottom: 0;
     width: 35vw;
+    animation: rightToCenter 3s ease;
 }
 
 section.about{
@@ -180,7 +200,7 @@ section.about .wrapper{
     justify-content: center;
     border-bottom: 1px solid var(--light-one);
 }
-section.about .wrapper img{
+section.about .wrapper .aboutImg{
     width: 26vw;
 }
 section.about .wrapper .text h4{
@@ -204,8 +224,8 @@ section.about .wrapper .text .icons img{
 
 section.projects{
     height: max-content;
-    min-height: 20%;
-    padding-block: 5vh;
+    min-height: 25%;
+    padding-block: 5dvh;
     padding-inline: var(--container);
     background-color: var(--light-two);
 }
@@ -229,12 +249,14 @@ section.projects .cards{
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    align-items: center;
+    height: max-content;
 }
 section.projects .cards .card{
     width: 20rem;
     padding: 0.5rem;
     border-radius: var(--border-radius);
-    border: 1px solid var(--gray);
+    border: 1px solid var(--card-border-color);
     transition: all 300ms;
 }
 section.projects .cards .card:hover{
@@ -282,9 +304,10 @@ section.projects .projectsOverlay .wrapper{
     width: 35vw;
     height: max-content;
     padding: var(--spacing);
-    background-color: var(--dark);
+    background-color: var(--stay-dark);
     border-radius: var(--border-radius);
     z-index: 2;
+    animation: slideTop 0.5s;
 }
 section.projects .projectsOverlay .wrapper .name{
     font: 700 var(--subtitle) 'Sora';
@@ -294,8 +317,12 @@ section.projects .projectsOverlay .wrapper .name{
 section.projects .projectsOverlay .wrapper .description{
     font: 400 var(--regular) 'Sora';
     text-align: justify;
+    color: var(--stay-light-two);
+}
+section.projects .projectsOverlay .wrapper .tags{
+    font: 400 var(--regular) 'Sora';
+    color: var(--primary);
     margin-bottom: var(--spacing);
-    color: var(--light-two);
 }
 section.projects .projectsOverlay .wrapper .gallery{
     display: flex;
@@ -326,16 +353,17 @@ section.projects .projectsOverlay .wrapper button:hover{
 }
 section.projects .projectsOverlay .wrapper button a{
     font: 700 var(--regular) 'Sora';
-    color: var(--dark);
+    color: var(--stay-dark);
 }
 
 
 section.contact{
     position: relative;
     height: 25%;
-    padding-top: 15vh;
+    padding-top: 15dvh;
     padding-inline: var(--container);
     background-color: var(--light-one);
+    overflow: hidden;
 }
 section.contact .backgroundAnimation{
     position: absolute;
@@ -355,7 +383,7 @@ section.contact .backgroundAnimation .row{
 }
 section.contact .backgroundAnimation p{
     font: 400 var(--regular) 'Sora';
-    color: #b722ed2f;
+    color: #b722ed63;
     text-wrap: nowrap;
 }
 section.contact h2{
@@ -417,7 +445,7 @@ section.contact form button{
     border: none;
     border-radius: var(--border-radius);
     font: 400 var(--regular) 'Sora';
-    color: var(--dark);
+    color: var(--stay-dark);
     background-color: var(--primary);
     margin-bottom: var(--spacing);
     transition: all 300ms;
@@ -450,38 +478,26 @@ section.contact ul li{
     transition: all 300ms;
 }
 section.contact ul li:hover{
-    box-shadow: 0px 0px 10px var(--primary);
-    background-color: var(--primary);
+    background-color: var(--gray);
     transition: all 300ms;
 }
 section.contact ul li img{
     width: 2rem;
 }
-section.contact ul li a{
-    font: 400 var(--regular) 'Sora';
-    color: var(--gray);
-    transition: all 300ms;
-    display: none;
-}
-section.contact ul li a:hover{
-    color: var(--secondary);
-    font-weight: 700;
-    transition: all 300ms;
-}
+
 
 footer{
     position: relative;
-    height: 45vh;
+    height: 45dvh;
     display: flex;
     justify-content: right;
     gap: var(--container);
     padding-inline: var(--container);
     padding-top: 10vh;
-    background-color: var(--dark);
+    background-color: var(--stay-dark);
 }
-
 footer .footerImage{
-    height: calc(100% - 10vh);
+    height: calc(100% - 10dvh);
     filter: opacity(0.5);
     position: absolute;
     left: var(--container);
@@ -503,7 +519,7 @@ footer .navigation nav{
 }
 footer .navigation nav a{
     font: 400 var(--regular) 'Sora';
-    color: var(--light-one);
+    color: var(--stay-light-one);
     margin-bottom: var(--spacing);
     transition: all 300ms;
 }
@@ -522,7 +538,7 @@ footer .contact ul li img{
 }
 footer .contact ul li a{
     font: 400 var(--regular) 'Sora';
-    color: var(--light-one);
+    color: var(--stay-light-one);
     transition: all 300ms;
 }
 footer .contact ul li a:hover{
@@ -535,4 +551,15 @@ footer .contact ul li a:hover{
     0%{transform: translateX(100vw);}
     100%{transform: translate(-100vw);}
 }
-
+@keyframes rightToCenter{
+    0%{transform: translateX(10rem); opacity: 0;}
+    100%{transform: translateX(0rem); opacity: 1;}   
+}
+@keyframes leftToCenter {
+    0%{transform: translateX(-10rem); opacity: 0;}
+    100%{transform: translateX(0rem); opacity: 1;}
+}
+@keyframes slideTop {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

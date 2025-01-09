@@ -15,6 +15,10 @@ function toggleTheme(){
     light = !light
 }
 
+function targetButton(element){
+    let target = document.getElementById(element)
+    target.click()
+}
 
 let openMenu = false
 function toggleMenu(){
@@ -43,4 +47,12 @@ function toogleOverlay (){
 
 function developmentAlert (){
     alert('Este projeto está em fase de desenvolvimento. Continue acompanhando!  : )')
+}
+
+function copyEmail(){
+    const email = "salatielmf49@gmail.com"
+    navigator.clipboard.writeText(email)
+        .then(
+            alert(`email "salatielmf19@gmail.com" foi copiado para a área de transferência.`)
+        )
 }
